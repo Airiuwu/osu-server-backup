@@ -27,6 +27,7 @@ def backup(sc):
     # Create RAR archive of the whole server
     print(f"{CYAN}Creating RAR archive of {config.mainDir} ({dateStamp}.rar){ENDC}")
     if path.exists(f"{config.selfDir}{yesterdayDateStamp}.rar"):
+        system(f"rm {config.mainDir}/{yesterdayDateStamp}.sql")
         system(f"rm {yesterdayDateStamp}.rar")
     system(f"rar a {dateStamp}.rar {config.mainDir}")
 
