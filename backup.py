@@ -18,7 +18,7 @@ def backup(sc):
 
     # Backup MySQL Database
     print(f"{CYAN}Creating backup of MySQL database{ENDC}")
-    system(f"mysqldump -u root {config.databaseName} > {config.mainDir}{dateStamp}.sql")
+    system(f"mysqldump -u root {config.databaseName} > {config.mainDir}/{dateStamp}.sql")
 
     # Backup NGINX configuration
     print(f"{CYAN}Creating backup of NGINX config{ENDC}")
